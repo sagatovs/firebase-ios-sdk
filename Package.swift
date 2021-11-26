@@ -141,15 +141,15 @@ let package = Package(
     ),
     .package(
       name: "GoogleAppMeasurement",
-      url: "https://github.com/google/GoogleAppMeasurement.git",
+      url: "https://github.com/sagatovs/GoogleAppMeasurement.git",
       // Note that CI changes the version to the head of main for CI.
       // See scripts/setup_spm_tests.sh.
-      .revision("9b2f6aca5b4685c45f9f5481f19bee8e7982c538")
+      .revision("c3a523f72262fce86ccc2e95c826c3e3dba85911")
     ),
     .package(
       name: "GoogleDataTransport",
-      url: "https://github.com/google/GoogleDataTransport.git",
-      .revision("15ccdfd25ac55b9239b82809531ff26605e7556e")
+      url: "https://github.com/sagatovs/GoogleDataTransport.git",
+      .revision("6b585d232726795a46a841d6bee0b999629a0edf")
     ),
     .package(
       name: "GoogleUtilities",
