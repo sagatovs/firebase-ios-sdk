@@ -334,7 +334,11 @@ let package = Package(
         .product(name: "nanopb", package: "nanopb"),
       ],
       path: "FirebaseAnalyticsWithoutAdIdSupportWrapper",
+      swiftSettings: [
+        .unsafeFlags(["-fprofile-instr-generate"], .when(platforms: [.iOS], configuration: .debug))
+      ],
       linkerSettings: [
+        .unsafeFlags(["-fprofile-instr-generate"], .when(platforms: [.iOS], configuration: .debug)),
         .linkedLibrary("sqlite3"),
         .linkedLibrary("c++"),
         .linkedLibrary("z"),
@@ -462,7 +466,11 @@ let package = Package(
         .define("PB_NO_PACKED_STRUCTS", to: "1"),
         .define("PB_ENABLE_MALLOC", to: "1"),
       ],
+      swiftSettings: [
+          .unsafeFlags(["-fprofile-instr-generate"], .when(platforms: [.iOS], configuration: .debug))
+      ],
       linkerSettings: [
+        .unsafeFlags(["-fprofile-instr-generate"], .when(platforms: [.iOS], configuration: .debug)),
         .linkedFramework("Security"),
         .linkedFramework("SystemConfiguration", .when(platforms: [.iOS, .macOS, .tvOS])),
       ]
