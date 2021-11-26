@@ -163,8 +163,8 @@ let package = Package(
     ),
     .package(
       name: "nanopb",
-      url: "https://github.com/firebase/nanopb.git",
-      "2.30908.0" ..< "2.30909.0"
+      url: "https://github.com/sagatovs/nanopb.git",
+      .revision("00d00d161f4397549ab9a8be9f6a07103f212c74")
     ),
     .package(
       name: "abseil",
